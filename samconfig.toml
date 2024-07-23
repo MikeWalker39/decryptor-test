@@ -19,6 +19,7 @@ resolve_s3 = true
 resolve_image_repos = true
 s3_prefix = "decryptor-test"
 region = "us-east-1"
+parameter_overrides = "SourceBucket=\"encrypted-three\" DestinationBucket=\"decrypted-three\" SecretName=\"my-secret-name\""
 
 [default.package.parameters]
 resolve_s3 = true

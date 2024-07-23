@@ -10,7 +10,7 @@
                 "logicalId": "HelloWorldFunction"
             },
             "lambda": {
-                "payload": {},
+                "payload": {"path": "${workspaceFolder}/events/event.json"},
                 "environmentVariables": {},
                 "runtime": "python3.12"
             }
