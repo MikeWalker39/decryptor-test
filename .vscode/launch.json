@@ -3,11 +3,11 @@
         {
             "type": "aws-sam",
             "request": "direct-invoke",
-            "name": "decryptor-test:HelloWorldFunction (python3.12)",
+            "name": "decryptor-test:DecryptFunction (python3.12)",
             "invokeTarget": {
                 "target": "template",
                 "templatePath": "${workspaceFolder}/template.yaml",
-                "logicalId": "HelloWorldFunction"
+                "logicalId": "DecryptFunction"
             },
             "lambda": {
                 "payload": {"path": "${workspaceFolder}/events/event.json"},

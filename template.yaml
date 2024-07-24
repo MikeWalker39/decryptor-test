@@ -11,7 +11,7 @@ Globals:
     Timeout: 30
 
 Resources:
-  HelloWorldFunction:
+  DecryptFunction:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
       PackageType: Image
@@ -37,7 +37,7 @@ Resources:
       #       Method: get
     Metadata:
       Dockerfile: Dockerfile
-      DockerContext: ./hello_world
+      DockerContext: ./decrypt_gnupg
       DockerTag: python3.12-v1
 
 Parameters:
@@ -60,9 +60,9 @@ Outputs:
   # HelloWorldApi:
   #   Description: "API Gateway endpoint URL for Prod stage for Hello World function"
   #   Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/hello/"
-  HelloWorldFunction:
-    Description: "Hello World Lambda Function ARN"
-    Value: !GetAtt HelloWorldFunction.Arn
-  HelloWorldFunctionIamRole:
-    Description: "Implicit IAM Role created for Hello World function"
-    Value: !GetAtt HelloWorldFunctionRole.Arn
+  DecryptFunction:
+    Description: "Decrypt Lambda Function ARN"
+    Value: !GetAtt DecryptFunction.Arn
+  DecryptFunctionIamRole:
+    Description: "Implicit IAM Role created for Decrypt function"
+    Value: !GetAtt DecryptFunctionRole.Arn
